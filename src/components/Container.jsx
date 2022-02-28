@@ -1,6 +1,20 @@
 import { Box, Center, Button, Text, Stack } from "@chakra-ui/react";
-
+import { useState, useEffect } from "react";
 export default function Container() {
+  const [quotes, setQuotes] = useState([]);
+
+  const getQuotes = async () => {
+    const res = await fetch("https://api.adviceslip.com/advice");
+    const data = await res.json();
+
+    console.log(data);
+
+    setQuotes(data.slip);
+  };
+
+  useEffect(() => {
+    getQuotes();
+  }, []);
   return (
     <Center py={20}>
       <Box
@@ -21,15 +35,12 @@ export default function Container() {
             textAlign={"center"}
             letterSpacing={1.1}
           >
-            Blog
+            ADVICE # {quotes.id}
           </Text>
           <Text color={"primary.LightCyan"} bg="neutral.GrayishBlue">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum.
+            {quotes.advice}
           </Text>
-          <Button colorScheme="teal" size="xs">
+          <Button onClick={getQuotes} colorScheme="teal" size="xs">
             Button
           </Button>
         </Stack>
