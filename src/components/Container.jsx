@@ -20,7 +20,7 @@ export default function Container() {
   }, []);
 
   return (
-    <Center py={"15%"} bg="neutral.DarkGrayishBlue">
+    <Center height={"61em"} bg="neutral.DarkGrayishBlue">
       <Box
         maxW={"345px"}
         boxShadow={"2xl"}
@@ -40,26 +40,27 @@ export default function Container() {
           >
             ADVICE # {quotes.id}
           </Text>
-          <Text color={"primary.LightCyan"} textAlign={"center"} pb={5}>
+          <Text color={"primary.LightCyan"} textAlign={"center"} pb={2}>
             {quotes.advice}
-
-            <source
-              media="(min-width: 768px)"
-              srcSet={pauseDesktop}
-              bg="neutral.DarkGrayishBlue"
-            />
-            <img src={pauseMobile} alt="" />
           </Text>
-          <Center>
-            <button
-              onClick={getQuotes}
-              _hover="{bg: 'primary.NeonGreen'}"
-              _focus="{bg: 'primary.NeonGreen'}"
-            >
-              <img src={dice} alt="" />
-            </button>
-          </Center>
+          <source
+            media="(min-width: 768px)"
+            srcSet={pauseDesktop}
+            bg="neutral.DarkGrayishBlue"
+          />
+          <img src={pauseMobile} alt="" />
         </Stack>
+        <Center pt={"-40%"}>
+          <Button
+            bg={"neutral.GrayishBlue"}
+            onClick={getQuotes}
+            _hover={{
+              background: "primary.NeonGreen",
+            }}
+          >
+            <img src={dice} alt="" />
+          </Button>
+        </Center>
       </Box>
     </Center>
   );

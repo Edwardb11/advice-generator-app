@@ -1,13 +1,6 @@
 import { extendTheme, theme } from "@chakra-ui/react";
 
 export default extendTheme({
-  styles: {
-    global: {
-      body: {
-        color: "red",
-      },
-    },
-  },
   colors: {
     primary: {
       LightCyan: "hsl(193, 38%, 74%)",
