@@ -1,7 +1,11 @@
 import Container from "./components/Container";
 
 function App() {
-  return <Container />;
+  return (
+    <>
+      <Container />;
+    </>
+  );
 }
 
 export default App;

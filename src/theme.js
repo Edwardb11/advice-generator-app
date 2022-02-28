@@ -4,18 +4,18 @@ export default extendTheme({
   styles: {
     global: {
       body: {
-        color: "blackAlpha.900",
+        color: "red",
       },
     },
   },
   colors: {
     primary: {
-      LightCyan: "hsl(193, 38%, 86%)",
+      LightCyan: "hsl(193, 38%, 74%)",
       NeonGreen: "hsl(150, 100%, 66%)",
     },
     neutral: {
-      GrayishBlue: "hsl(217, 19%, 38%)",
-      DarkGrayishBlue: "hsl(217, 19%, 24%)",
+      GrayishBlue: "hsl(217, 20%, 26%)",
+      DarkGrayishBlue: "hsl(217, 19%, 17%)",
     },
   },
 });

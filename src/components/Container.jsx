@@ -1,5 +1,8 @@
 import { Box, Center, Button, Text, Stack } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
+import pauseMobile from "../../Public/images/pattern-divider-mobile.svg";
+import pauseDesktop from "../../Public/images/pattern-divider-desktop.svg";
+import dice from "../../Public/images/icon-dice.svg";
 export default function Container() {
   const [quotes, setQuotes] = useState([]);
 
@@ -15,8 +18,9 @@ export default function Container() {
   useEffect(() => {
     getQuotes();
   }, []);
+
   return (
-    <Center py={20}>
+    <Center py={"15%"} bg="neutral.DarkGrayishBlue">
       <Box
         maxW={"345px"}
         boxShadow={"2xl"}
@@ -25,11 +29,10 @@ export default function Container() {
         bg="neutral.GrayishBlue"
         overflow={"hidden"}
       >
-        <Stack bg="neutral.GrayishBlue">
+        <Stack>
           <Text
             color={"primary.NeonGreen"}
             textTransform={"uppercase"}
-            bg="neutral.GrayishBlue"
             fontWeight={800}
             fontSize={"sm"}
             textAlign={"center"}
@@ -37,12 +40,25 @@ export default function Container() {
           >
             ADVICE # {quotes.id}
           </Text>
-          <Text color={"primary.LightCyan"} bg="neutral.GrayishBlue">
+          <Text color={"primary.LightCyan"} textAlign={"center"} pb={5}>
             {quotes.advice}
+
+            <source
+              media="(min-width: 768px)"
+              srcSet={pauseDesktop}
+              bg="neutral.DarkGrayishBlue"
+            />
+            <img src={pauseMobile} alt="" />
           </Text>
-          <Button onClick={getQuotes} colorScheme="teal" size="xs">
-            Button
-          </Button>
+          <Center>
+            <button
+              onClick={getQuotes}
+              _hover="{bg: 'primary.NeonGreen'}"
+              _focus="{bg: 'primary.NeonGreen'}"
+            >
+              <img src={dice} alt="" />
+            </button>
+          </Center>
         </Stack>
       </Box>
     </Center>
