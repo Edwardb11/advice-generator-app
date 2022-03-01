@@ -6,3 +6,15 @@
   font-family: "Rubik", sans-serif;
   /* background-color: var(--dark-grayish-blue); */
 }
+
+@media (hover: hover) {
+  .dice-img:hover {
+    box-shadow: -1px 1px 88px 12px rgba(82, 255, 168, 1);
+    -webkit-box-shadow: -1px 1px 88px 12px rgba(82, 255, 168, 1);
+    -moz-box-shadow: -1px 1px 88px 12px rgba(82, 255, 168, 1);
+    transition: all ease-in-out 0.3s;
+  }
+}
+.link {
+  color: #422eee;
+}

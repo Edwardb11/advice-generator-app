@@ -56,14 +56,37 @@ export default function Container() {
       </Center>
       <Center my={"-11rem"} top="0px">
         <Button
-          bg={"neutral.GrayishBlue"}
+          rounded={"3xl"}
+          bg={"primary.NeonGreen"}
           onClick={getQuotes}
-          _hover={{
-            background: "primary.NeonGreen",
-          }}
+          className="dice-img"
         >
           <img src={dice} alt="" />
         </Button>
+      </Center>
+      <Center>
+        <Box my={"12rem"}>
+          <Stack color="white">
+            <Text>
+              <span>Challenge by </span>
+              <a
+                href="https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db"
+                target="_blank"
+                className={"link"}
+              >
+                Frontend Mentor.
+              </a>
+              Coded by 👑
+              <a
+                href="https://github.com/Edwardb11/advice-generator-app"
+                target="_blank"
+                className={"link"}
+              >
+                Edwardb11👑
+              </a>
+            </Text>
+          </Stack>
+        </Box>
       </Center>
     </>
   );
