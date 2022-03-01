@@ -1,6 +1,14 @@
 import { extendTheme, theme } from "@chakra-ui/react";
 
 export default extendTheme({
+  styles: {
+    global: () => ({
+      body: {
+        fontFamily: "'Rubik', sans-serif",
+        backgroundColor: "hsl(217, 19%, 17%)",
+      },
+    }),
+  },
   colors: {
     primary: {
       LightCyan: "hsl(193, 38%, 74%)",

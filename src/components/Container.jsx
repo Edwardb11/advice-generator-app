@@ -20,48 +20,50 @@ export default function Container() {
   }, []);
 
   return (
-    <Center height={"61em"} bg="neutral.DarkGrayishBlue">
-      <Box
-        maxW={"345px"}
-        boxShadow={"2xl"}
-        rounded={"md"}
-        p={6}
-        bg="neutral.GrayishBlue"
-        overflow={"hidden"}
-      >
-        <Stack>
-          <Text
-            color={"primary.NeonGreen"}
-            textTransform={"uppercase"}
-            fontWeight={800}
-            fontSize={"sm"}
-            textAlign={"center"}
-            letterSpacing={1.1}
-          >
-            ADVICE # {quotes.id}
-          </Text>
-          <Text color={"primary.LightCyan"} textAlign={"center"} pb={2}>
-            {quotes.advice}
-          </Text>
-          <source
-            media="(min-width: 768px)"
-            srcSet={pauseDesktop}
-            bg="neutral.DarkGrayishBlue"
-          />
-          <img src={pauseMobile} alt="" />
-        </Stack>
-        <Center pt={"-40%"}>
-          <Button
-            bg={"neutral.GrayishBlue"}
-            onClick={getQuotes}
-            _hover={{
-              background: "primary.NeonGreen",
-            }}
-          >
-            <img src={dice} alt="" />
-          </Button>
-        </Center>
-      </Box>
-    </Center>
+    <>
+      <Center py={"10rem"}>
+        <Box
+          maxW={"405px"}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          p={6}
+          bg="neutral.GrayishBlue"
+          overflow={"hidden"}
+        >
+          <Stack mb={"2rem"}>
+            <Text
+              color={"primary.NeonGreen"}
+              textTransform={"uppercase"}
+              fontWeight={800}
+              fontSize={"sm"}
+              textAlign={"center"}
+              letterSpacing={1.1}
+            >
+              ADVICE # {quotes.id}
+            </Text>
+            <Text color={"primary.LightCyan"} textAlign={"center"} pb={2}>
+              {quotes.advice}
+            </Text>
+            <source
+              media="(min-width: 768px)"
+              srcSet={pauseDesktop}
+              bg="neutral.DarkGrayishBlue"
+            />
+            <img src={pauseMobile} alt="" />
+          </Stack>
+        </Box>
+      </Center>
+      <Center m={"-11rem"} top="0px">
+        <Button
+          bg={"neutral.GrayishBlue"}
+          onClick={getQuotes}
+          _hover={{
+            background: "primary.NeonGreen",
+          }}
+        >
+          <img src={dice} alt="" />
+        </Button>
+      </Center>
+    </>
   );
 }
