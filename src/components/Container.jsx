@@ -23,7 +23,8 @@ export default function Container() {
     <>
       <Center py={"10rem"}>
         <Box
-          maxW={"405px"}
+          minW={"200px"}
+          maxW={"345px"}
           boxShadow={"2xl"}
           rounded={"md"}
           p={6}
@@ -53,7 +54,7 @@ export default function Container() {
           </Stack>
         </Box>
       </Center>
-      <Center m={"-11rem"} top="0px">
+      <Center my={"-11rem"} top="0px">
         <Button
           bg={"neutral.GrayishBlue"}
           onClick={getQuotes}
