@@ -24,7 +24,7 @@ The perfect project if you're learning how to interact with 3rd-party APIs. This
 - Solution URL: [Advice-generator-app
   ](https://github.com/Edwardb11/advice-generator-app)
 - Live Site URL: [Advice-generator-app
-  ](https://advice-generator-app-3viny9rk2-edwardb11.vercel.app/)
+  ](https://advice-generator-app-edwardb11.vercel.app/)
 
 ## My process
 
